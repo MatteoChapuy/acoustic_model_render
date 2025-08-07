@@ -4,3 +4,5 @@ dash-mantine-components
 pandas~=2.3.1
 plotly~=6.2.0
 gunicorn
+dash_ag_grid
+python-dotenv
