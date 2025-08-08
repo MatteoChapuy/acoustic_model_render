@@ -8,27 +8,16 @@ layout = [
         gutter="md",
         children=[
             dmc.GridCol(
-                [dmc.Paper(
-                    [
-                        dmc.Title("Load Data", order=2),
-                        dmc.Select(
-                            id="csv-select",
-                            placeholder="Select CSV file...",
-                            data=[],
-                            clearable=False,
-                            searchable=True,
-                            mt=10
-                        ),
-                    ], withBorder=True, shadow="md", p="lg", radius="md", mt=20
-                ),
+                [
                     dmc.Paper(
                         [
-                            dmc.Title("Parameters", order=2),
+                            dmc.Title("Parameters", order=4),
                             dmc.MultiSelect(
                                 label="Model(s) section",
                                 data=["Acventum (delhom)", "Nord2000 (delhom)", "Nord2000 (windPro)",
                                       "BE2 (Iso9613)",
                                       "Iso9613 (windPro)"],
+                                value=["Nord2000 (delhom)"],
                                 id="models-select",
                             ),
                             dmc.Flex([
@@ -59,8 +48,8 @@ layout = [
                                 ),
                                 dmc.Select(
                                     label="Topography (m)",
-                                    data=["Montain"],
-                                    value="Montain",
+                                    data=["Mountain","Mountain 2", "Flat"],
+                                    value="Mountain",
                                     id="topography-select",
                                 )
                             ],
@@ -83,21 +72,43 @@ layout = [
                                 direction="row",
                             ),
                         ],
-                        withBorder=True, shadow="md", p="lg", radius="md", mt=20
+                        withBorder=True, shadow="md", p="lg", radius="md"
                     ),
                     dmc.Paper(
-                        [dmc.Title("Topography", order=3),
+                        [dmc.Title("Topography", order=4),
                          dmc.Container(id="topography-chart"),
                          ],
-                        withBorder=True, shadow="md", p="lg", radius="md", mt=20)],
+                        withBorder=True, shadow="md", p="lg", radius="md", mt=20),
+                ],
                 span=4
             ),
             dmc.GridCol(
-                dmc.Paper(
-                    [dmc.Title("Excess Attenuation", order=3),
-                     dmc.Container(id="attenuation-chart-container")],
-                    withBorder=True, shadow="md", p="lg", radius="md", mt=20),
-                span=8
+                [
+                    dmc.Paper(
+                        [dmc.Title("Wind Turbine", order=4),
+                         dmc.Select(
+                             label="Source type",
+                             data=["example"],
+                             value="example",
+                             id="source-select",
+                         ),
+                         dmc.Container(id="wind-turbine-card"),
+
+                         ],
+                        withBorder=True, shadow="md", p="lg", radius="md"),
+                    dmc.Paper(
+                        [dmc.Title("Global SPL", order=4),
+                         dmc.Container(id="global-chart-container", h="auto")],
+                        withBorder=True, shadow="md", p="lg", radius="md", mt=20)
+                ],
+                span=4),
+            dmc.GridCol(
+                [dmc.Paper(
+                    [dmc.Title("Excess Attenuation", order=4),
+                     dmc.Container(id="attenuation-chart-container", h=700)],
+                    withBorder=True, shadow="md", p="lg", radius="md"),
+                ],
+                span=4
             )
         ]
     ),
