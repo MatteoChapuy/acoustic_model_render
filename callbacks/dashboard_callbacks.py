@@ -11,11 +11,14 @@ wind_direction_dict = {
 }
 
 color_map = {
-    "Acventum (delhom)": "#E63946",  # Soft red
-    "Nord2000 (delhom)": "#2A9D8F",  # Teal green
-    "Nord2000 (windPro)": "#F4A261",  # Warm orange
-    "BE2 (Iso9613)": "#457B9D",  # Muted blue
-    "Iso9613 (windPro)": "#9D4EDD"  # Soft purple
+    "Acventum (delhom)": "#E63946",                     # Soft red
+    "Nord2000 (delhom)": "#2A9D8F",                     # Teal green
+    "Nord2000 (windPro)": "#F4A261",                    # Warm orange
+    "BE2 (Iso9613)": "#457B9D",                         # Muted blue
+    "Iso9613 (windPro)": "#9D4EDD",                     # Soft purple
+    "ISO9613_2024 (delhom)": "#E76F51",                 # Terra cotta
+    "ISO9613_2024 (delhom_module_meteo_ISO)": "#1D3557",     # Deep navy
+    "ISO9613_2024 (delhom_module_meteo_CONCAWE)": "#06D6A0"  # Fresh mint green
 }
 
 

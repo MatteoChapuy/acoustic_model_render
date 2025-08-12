@@ -15,8 +15,9 @@ layout = [
                             dmc.MultiSelect(
                                 label="Model(s) section",
                                 data=["Acventum (delhom)", "Nord2000 (delhom)", "Nord2000 (windPro)",
-                                      "BE2 (Iso9613)",
-                                      "Iso9613 (windPro)"],
+                                      "BE2 (Iso9613)", "Iso9613 (windPro)", "ISO9613_2024 (delhom)",
+                                      "ISO9613_2024 (delhom_module_meteo_ISO)",
+                                      "ISO9613_2024 (delhom_module_meteo_CONCAWE)"],
                                 value=["Nord2000 (delhom)"],
                                 id="models-select",
                             ),
@@ -48,7 +49,7 @@ layout = [
                                 ),
                                 dmc.Select(
                                     label="Topography (m)",
-                                    data=["Mountain","Mountain 2", "Flat"],
+                                    data=["Mountain", "Flat"],
                                     value="Mountain",
                                     id="topography-select",
                                 )
